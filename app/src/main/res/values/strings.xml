@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cipher Lock</string>
+    <string name="accessibility_service_description">বাচ্চার স্ক্রিন-টাইম নিয়ন্ত্রণের জন্য: সেট করা সময়ের আগে অ্যাপ থেকে বের হওয়া আটকায়।</string>
+    <string name="reminder_title">রিমাইন্ডার</string>
+    <string name="reminder_text">নির্ধারিত সময় হয়েছে</string>
+</resources>
