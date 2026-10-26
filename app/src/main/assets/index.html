@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cipher Lock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- হোম স্ক্রিন -->
+  <section id="view-home" class="view view-active">
+    <div class="home-top">
+      <p class="eyebrow-free">আজকের জন্য প্রস্তুত</p>
+      <h1>একটু দেখে নাও</h1>
+    </div>
+
+    <button id="btn-youtube" class="hero-button">
+      <svg class="hero-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 8.5L16 12L9 15.5V8.5Z" fill="currentColor"/>
+      </svg>
+      <span>ইউটিউব দেখো</span>
+    </button>
+
+    <button id="btn-settings-gear" class="gear-button" aria-label="অভিভাবক সেটিংস">⚙</button>
+  </section>
+
+  <!-- ইউটিউব ভিউ -->
+  <section id="view-player" class="view">
+    <iframe id="player-frame" class="player-frame" src="" allowfullscreen></iframe>
+  </section>
+
+  <!-- লক স্ক্রিন -->
+  <section id="view-lock" class="view">
+    <div class="lock-card">
+      <div class="lock-icon">॥</div>
+      <h2>এখন বিরতির সময়</h2>
+      <p>পরের বার আবার দেখা যাবে</p>
+    </div>
+    <button id="btn-lock-parent" class="parent-link">অভিভাবক?</button>
+  </section>
+
+  <!-- পিন মডাল -->
+  <div id="modal-pin" class="modal-backdrop">
+    <div class="sheet">
+      <h3>অভিভাবক পিন</h3>
+      <p class="sheet-sub">চার সংখ্যার পিন দিন</p>
+      <input id="pin-input" class="pin-input" type="password" inputmode="numeric" maxlength="4" autocomplete="off">
+      <p id="pin-error" class="pin-error" hidden>পিন ভুল হয়েছে</p>
+      <div class="sheet-actions">
+        <button id="pin-cancel" class="btn-ghost">বাতিল</button>
+        <button id="pin-confirm" class="btn-primary">পরবর্তী</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- টাইমার সেটিংস মডাল (পিন সঠিক হলে দেখানো হয়) -->
+  <div id="modal-timer" class="modal-backdrop">
+    <div class="sheet">
+      <h3>কতক্ষণ দেখবে?</h3>
+      <p class="sheet-sub">সময় শেষ হলে স্ক্রিন নিজে থেকেই আটকে যাবে</p>
+      <div class="chip-row">
+        <button class="chip" data-minutes="15">১৫ মিনিট</button>
+        <button class="chip" data-minutes="30">৩০ মিনিট</button>
+        <button class="chip" data-minutes="60">৬০ মিনিট</button>
+      </div>
+      <div class="sheet-actions">
+        <button id="timer-cancel" class="btn-ghost">বাতিল</button>
+        <button id="timer-exit-now" class="btn-ghost">এখনই বন্ধ করো</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+        </html>
